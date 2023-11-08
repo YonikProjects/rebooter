@@ -55,4 +55,6 @@ def default(path):
 
 
 if __name__ == "__main__":
-    app.run()
+    from waitress import serve  # type: ignore
+
+    serve(app, port=5000)
